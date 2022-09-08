@@ -6,21 +6,31 @@
  */
 
 /**
- * Represents the CaloriesCounterExercise
+ * Represents class of the CaloriesCounterExercise.
  *
  * @class
 **/
 export class CaloriesCounterForExercises {
+
+    #height // The height of the person.
+
+    #weight // The weight of the person.
+    
     /**
      * Creates a CaloriesCounterExercises. 
      *
      */
     constructor(height, weight) {
-        this.height = height
-        this.weight = weight
+        this.#height = height
+        this.#weight = weight
     }
 
+    /**
+     * Returns the BMI of the person. 
+     *
+     * @returns { number } the value of the BMI.
+     */
     getBMI() {
-        return this.height + this.weight
+        return this.#weight / (this.#height * this.#height)
     }
 }
