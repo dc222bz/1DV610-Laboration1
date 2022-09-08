@@ -18,8 +18,8 @@ export class CaloriesCounterForExercises {
   /**
    * Creates a CaloriesCounterForExercises.
    *
-   * @param { number } height height.
-   * @param { number } weight weight.
+   * @param { number } height height in meter.
+   * @param { number } weight weight in kilograms.
    */
   constructor (height, weight) {
     this.#height = height
