@@ -5,11 +5,9 @@
   "type": "module",
   "browser": "js/index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "npx eslint ./js || exit 0",
-    "lint:fix": "npx eslint ./js --fix || exit 0"
+    "start": "node ./test-app/js/index.js",
+    "lint": "npx eslint ./test-app/js/index.js || exit 0",
+    "lint:fix": "npx eslint ./test-app/js/index.js --fix || exit 0"
   },
   "contributors": [
     "Daniel Carlsson <dc222bz@student.lnu.se>"
@@ -17,7 +15,6 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@lnu/eslint-config": "^1.1.4",
-    "vite": "^3.0.9"
+    "@lnu/eslint-config": "^1.1.4"
   }
 }

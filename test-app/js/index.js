@@ -1,10 +1,12 @@
 /**
- * The main script file of the application.
+ * The main script file of the test-app.
  *
  * @author Daniel Carlsson <dc222bz@student.lnu.se>
  * @version 1.0.0
  */
 
-import './components/my-name/index.js'
+import { CaloriesCounterForExercises } from '../../module/caloriesCounterExercise/caloriesCounterExercise.js'
 
-document.querySelector('#container').appendChild(document.createElement('my-test'))
+const result = new CaloriesCounterForExercises(1, 2)
+
+console.log(result.getBMI())
