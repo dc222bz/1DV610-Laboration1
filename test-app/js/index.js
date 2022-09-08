@@ -5,7 +5,7 @@
  * @version 1.0.0
  */
 
-import { CaloriesCounterForExercises } from '../../module/caloriesCounterExercise/caloriesCounterExercise.js'
+import { CaloriesCounterForExercises } from '../../module/caloriesCounterForExercises/caloriesCounterForExercises.js'
 
 const daniel = new CaloriesCounterForExercises(1.8, 100)
 
