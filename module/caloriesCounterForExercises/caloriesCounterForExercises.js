@@ -6,7 +6,7 @@
  */
 
 /**
- * Represents class of the CaloriesCounterForExercise.
+ * Represents class of the CaloriesCounterForExercises.
  *
  * @class
  **/
@@ -118,6 +118,182 @@ export class CaloriesCounterForExercises {
     let met
     if (time > 0 && !isNaN(time)) {
       met = 6.0
+    } else {
+      throw Error('Invalid Time')
+    }
+    return time * (met * 3.5 * this.#weight) / 200
+  }
+
+  /**
+   * Returns the calories burned from running moderate pace (mets = 10.0).
+   *
+   * @param { number } time the time in minutes.
+   * @returns { number } the value of calories burned (kcal).
+   */
+  getCaloriesRunning (time) {
+    let met
+    if (time > 0 && !isNaN(time)) {
+      met = 10.0
+    } else {
+      throw Error('Invalid Time')
+    }
+    return time * (met * 3.5 * this.#weight) / 200
+  }
+
+  /**
+   * Returns the calories burned from weight training (mets = 6.0).
+   *
+   * @param { number } time the time in minutes.
+   * @returns { number } the value of calories burned (kcal).
+   */
+  getCaloriesWeightTraining (time) {
+    let met
+    if (time > 0 && !isNaN(time)) {
+      met = 6.0
+    } else {
+      throw Error('Invalid Time')
+    }
+    return time * (met * 3.5 * this.#weight) / 200
+  }
+
+  /**
+   * Returns the calories burned from playing Badminton (mets = 5.5).
+   *
+   * @param { number } time the time in minutes.
+   * @returns { number } the value of calories burned (kcal).
+   */
+  getCaloriesBadminton (time) {
+    let met
+    if (time > 0 && !isNaN(time)) {
+      met = 5.5
+    } else {
+      throw Error('Invalid Time')
+    }
+    return time * (met * 3.5 * this.#weight) / 200
+  }
+
+  /**
+   * Returns the calories burned from playing Basketball (mets = 6.5).
+   *
+   * @param { number } time the time in minutes.
+   * @returns { number } the value of calories burned (kcal).
+   */
+  getCaloriesBasketball (time) {
+    let met
+    if (time > 0 && !isNaN(time)) {
+      met = 6.5
+    } else {
+      throw Error('Invalid Time')
+    }
+    return time * (met * 3.5 * this.#weight) / 200
+  }
+
+  /**
+   * Returns the calories burned from playing Golf (mets = 4.8).
+   *
+   * @param { number } time the time in minutes.
+   * @returns { number } the value of calories burned (kcal).
+   */
+  getCaloriesGolf (time) {
+    let met
+    if (time > 0 && !isNaN(time)) {
+      met = 4.8
+    } else {
+      throw Error('Invalid Time')
+    }
+    return time * (met * 3.5 * this.#weight) / 200
+  }
+
+  /**
+   * Returns the calories burned from playing Handball (mets = 12.0).
+   *
+   * @param { number } time the time in minutes.
+   * @returns { number } the value of calories burned (kcal).
+   */
+  getCaloriesHandball (time) {
+    let met
+    if (time > 0 && !isNaN(time)) {
+      met = 12.0
+    } else {
+      throw Error('Invalid Time')
+    }
+    return time * (met * 3.5 * this.#weight) / 200
+  }
+
+  /**
+   * Returns the calories burned from playing icehockey (mets = 8.0).
+   *
+   * @param { number } time the time in minutes.
+   * @returns { number } the value of calories burned (kcal).
+   */
+  getCaloriesIcehockey (time) {
+    let met
+    if (time > 0 && !isNaN(time)) {
+      met = 8.0
+    } else {
+      throw Error('Invalid Time')
+    }
+    return time * (met * 3.5 * this.#weight) / 200
+  }
+
+  /**
+   * Returns the calories burned from rollerblading moderate pace (mets = 9.8).
+   *
+   * @param { number } time the time in minutes.
+   * @returns { number } the value of calories burned (kcal).
+   */
+  getCaloriesRollerblading (time) {
+    let met
+    if (time > 0 && !isNaN(time)) {
+      met = 9.8
+    } else {
+      throw Error('Invalid Time')
+    }
+    return time * (met * 3.5 * this.#weight) / 200
+  }
+
+  /**
+   * Returns the calories burned from playing soccer (mets = 7.0).
+   *
+   * @param { number } time the time in minutes.
+   * @returns { number } the value of calories burned (kcal).
+   */
+  getCaloriesSoccer (time) {
+    let met
+    if (time > 0 && !isNaN(time)) {
+      met = 7.0
+    } else {
+      throw Error('Invalid Time')
+    }
+    return time * (met * 3.5 * this.#weight) / 200
+  }
+
+  /**
+   * Returns the calories burned from playing Tennis (mets = 7.3).
+   *
+   * @param { number } time the time in minutes.
+   * @returns { number } the value of calories burned (kcal).
+   */
+  getCaloriesTennis (time) {
+    let met
+    if (time > 0 && !isNaN(time)) {
+      met = 7.3
+    } else {
+      throw Error('Invalid Time')
+    }
+    return time * (met * 3.5 * this.#weight) / 200
+  }
+
+  /**
+   * Returns the calories burned from playing Beach Volleyball (mets = 8.0).
+   *
+   * @param { number } time the time in minutes.
+   * @returns { number } the value of calories burned (kcal).
+   */
+  getCaloriesBeachVolleyball (time) {
+    let met
+    if (time > 0 && !isNaN(time)) {
+      met = 8.0
     } else {
       throw Error('Invalid Time')
     }
