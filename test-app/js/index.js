@@ -7,6 +7,8 @@
 
 import { CaloriesCounterForExercises } from '../../module/caloriesCounterForExercises/caloriesCounterForExercises.js'
 
-const daniel = new CaloriesCounterForExercises(1.8, 100)
+const daniel = new CaloriesCounterForExercises(180, 100, 38, 'male', 1.4)
 
-console.log('BMI of Daniel: ' + daniel.getBMI())
+console.log(daniel.getBMR())
+console.log(daniel.getMaintenanceCalories())
+console.log(daniel.getCaloriesWalking(60))
