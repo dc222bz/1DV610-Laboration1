@@ -5,7 +5,8 @@
   "type": "module",
   "browser": "js/index.js",
   "scripts": {
-    "start": "node ./test-app/js/index.js",
+    "test-app": "node ./test-app/test-app.js",
+    "test": "npx --node-options=--experimental-vm-modules jest || exit 0",
     "lint": "npx eslint ./test-app/js/index.js || exit 0",
     "lint:fix": "npx eslint ./test-app/js/index.js --fix || exit 0"
   },
@@ -16,5 +17,8 @@
   "private": true,
   "devDependencies": {
     "@lnu/eslint-config": "^1.1.4"
+  },
+  "dependencies": {
+    "jest": "^29.0.2"
   }
 }
