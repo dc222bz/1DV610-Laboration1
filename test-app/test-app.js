@@ -7,9 +7,14 @@
 
 import { CaloriesCounterForExercises } from '../module/caloriesCounterForExercises/caloriesCounterForExercises.js'
 
-const testPerson = new CaloriesCounterForExercises(180, 100, 38, 'male', 1.2)
+const testPersonMale = new CaloriesCounterForExercises(180, 100, 38, 'male', 1.2)
+const testPersonFemale = new CaloriesCounterForExercises(152, 52, 28, 'female', 1.75)
 
-const bmr = testPerson.getBMR()
-const maintenanceCalories = testPerson.getMaintenanceCalories()
+const bmrMale = testPersonMale.getBMR()
+const maintenanceCaloriesMale = testPersonMale.getMaintenanceCalories()
 
-console.log('BMR: ' + bmr, 'MaintenanceCalories: ' + maintenanceCalories)
+const bmrFemale = testPersonFemale.getBMR()
+const maintenanceCaloriesFemale = testPersonFemale.getMaintenanceCalories()
+
+console.log('Male - BMR: ' + bmrMale, 'MaintenanceCalories: ' + maintenanceCaloriesMale)
+console.log('Female - BMR: ' + bmrFemale, 'MaintenanceCalories: ' + maintenanceCaloriesFemale)
