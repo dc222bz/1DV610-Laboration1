@@ -22,31 +22,153 @@ export class CaloriesCounterForExercises {
   /**
    * Creates a CaloriesCounterForExercises.
    *
-   * @param { number } height height in centimeters.
-   * @param { number } weight weight in kilograms.
-   * @param { number } age age in years.
-   * @param { number } sex male or female.
+   * @param { number } height height in centimeters [0-250].
+   * @param { number } weight weight in kilograms [0-500].
+   * @param { number } age age in years [0-120].
+   * @param { string } sex male or female.
    * @param { number } activityLevel level of physical activity level [ None = 1.2, Light ( 1-2/week ) = 1.4, moderate ( 2-3/week ) = 1.6, hard ( 3-5/week ) = 1.75, hard ( 6-7/week ) = 2.0 and professional = 2.4 ]
    */
   constructor (height, weight, age, sex, activityLevel) {
-    this.#height = height
-    this.#weight = weight
-    this.#age = age
-    this.#sex = sex
-    this.#activityLevel = activityLevel
-    this.setBMR()
-    this.setMaintenanceCalories()
+    this.#setHeight(height)
+    this.#setWeight(weight)
+    this.#setAge(age)
+    this.#setSex(sex)
+    this.#setActivityLevel(activityLevel)
+    this.#setBMR()
+    this.#setMaintenanceCalories()
+  }
+
+  /**
+   * Sets the height of the person.
+   *
+   * @param { number } height the height in centimeters.
+   */
+  #setHeight (height) {
+    if (height > 0 && height < 250 && !isNaN(height)) {
+      this.#height = height
+    } else {
+      throw Error('Invalid Height')
+    }
+  }
+
+  /**
+   * Returns the height of the person.
+   *
+   * @returns { number } the height (cm).
+   */
+  getHeight () {
+    return this.#height
+  }
+
+  /**
+   * Sets the weight of the person.
+   *
+   * @param { number } weight the weight (kg).
+   */
+  #setWeight (weight) {
+    if (weight > 0 && weight < 500 && !isNaN(weight)) {
+      this.#weight = weight
+    } else {
+      throw Error('Invalid Weight')
+    }
+  }
+
+  /**
+   * Returns the weight of the person.
+   *
+   * @returns { number } the weight (kg).
+   */
+  getWeight () {
+    return this.#weight
+  }
+
+  /**
+   * Sets the age of the person.
+   *
+   * @param { number } age the age (years).
+   */
+  #setAge (age) {
+    if (age > 0 && age < 120 && !isNaN(age)) {
+      this.#age = age
+    } else {
+      throw Error('Invalid Age')
+    }
+  }
+
+  /**
+   * Returns the age of the person.
+   *
+   * @returns { number } the age (years).
+   */
+  getAge () {
+    return this.#age
+  }
+
+  /**
+   * Sets the sex of the person.
+   *
+   * @param { number } sex the sex (male or female).
+   */
+  #setSex (sex) {
+    if (sex === 'male' || sex === 'Male' || sex === 'MALE') {
+      this.#sex = 'male'
+    } else if (sex === 'female' || sex === 'Female' || sex === 'FEMALE') {
+      this.#sex = 'female'
+    } else {
+      throw Error('Invalid Sex')
+    }
+  }
+
+  /**
+   * Returns the sex of the person.
+   *
+   * @returns { number } the sex (male or female).
+   */
+  getSex () {
+    return this.#sex
+  }
+
+  /**
+   * Sets the sex of the person.
+   *
+   * @param { number } activityLevel the activity level [1.2, 1.4, 1.6, 1.75, 2.0, 2.4].
+   */
+  #setActivityLevel (activityLevel) {
+    if (activityLevel === 1.2) {
+      this.#activityLevel = 1.2
+    } else if (activityLevel === 1.4) {
+      this.#activityLevel = 1.4
+    } else if (activityLevel === 1.6) {
+      this.#activityLevel = 1.6
+    } else if (activityLevel === 1.75) {
+      this.#activityLevel = 1.75
+    } else if (activityLevel === 2.0) {
+      this.#activityLevel = 2.0
+    } else if (activityLevel === 2.4) {
+      this.#activityLevel = 2.4
+    } else {
+      throw Error('Invalid Activity Level')
+    }
+  }
+
+  /**
+   * Returns the sex of the person.
+   *
+   * @returns { number } the sex (male or female).
+   */
+  getActivityLevel () {
+    return this.#activityLevel
   }
 
   /**
    * Sets the BMR of a person using the Mifflin-St Jeor formula.
    *
    */
-  setBMR () {
-    if (this.#sex === 'male') {
-      this.#bmr = 10 * this.#weight + 6.25 * this.#height - 5 * this.#age + 5
-    } else if (this.#sex === 'female') {
-      this.#bmr = 10 * this.#weight + 6.25 * this.#height - 5 * this.#age - 161
+  #setBMR () {
+    if (this.getSex() === 'male') {
+      this.#bmr = 10 * this.getWeight() + 6.25 * this.getHeight() - 5 * this.getAge() + 5
+    } else if (this.getSex() === 'female') {
+      this.#bmr = 10 * this.getWeight() + 6.25 * this.getHeight() - 5 * this.getAge() - 161
     } else {
       throw Error('Invalid Sex')
     }
@@ -65,19 +187,19 @@ export class CaloriesCounterForExercises {
    * Sets the daily maintenance calories.
    *
    */
-  setMaintenanceCalories () {
-    if (this.#activityLevel === 1.2) {
-      this.#maintenanceCalories = this.#bmr * this.#activityLevel
-    } else if (this.#activityLevel === 1.4) {
-      this.#maintenanceCalories = this.#bmr * this.#activityLevel
-    } else if (this.#activityLevel === 1.6) {
-      this.#maintenanceCalories = this.#bmr * this.#activityLevel
-    } else if (this.#activityLevel === 1.75) {
-      this.#maintenanceCalories = this.#bmr * this.#activityLevel
-    } else if (this.#activityLevel === 2.0) {
-      this.#maintenanceCalories = this.#bmr * this.#activityLevel
-    } else if (this.#activityLevel === 2.4) {
-      this.#maintenanceCalories = this.#bmr * this.#activityLevel
+  #setMaintenanceCalories () {
+    if (this.getActivityLevel() === 1.2) {
+      this.#maintenanceCalories = this.getBMR() * this.getActivityLevel()
+    } else if (this.getActivityLevel() === 1.4) {
+      this.#maintenanceCalories = this.getBMR() * this.getActivityLevel()
+    } else if (this.getActivityLevel() === 1.6) {
+      this.#maintenanceCalories = this.getBMR() * this.getActivityLevel()
+    } else if (this.getActivityLevel() === 1.75) {
+      this.#maintenanceCalories = this.getBMR() * this.getActivityLevel()
+    } else if (this.getActivityLevel() === 2.0) {
+      this.#maintenanceCalories = this.getBMR() * this.getActivityLevel()
+    } else if (this.getActivityLevel() === 2.4) {
+      this.#maintenanceCalories = this.getBMR() * this.getActivityLevel()
     } else {
       throw Error('Invalid Activity Level')
     }
