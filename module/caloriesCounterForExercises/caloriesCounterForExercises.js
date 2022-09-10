@@ -107,7 +107,7 @@ export class CaloriesCounterForExercises {
   /**
    * Sets the sex of the person.
    *
-   * @param { number } sex the sex (male or female).
+   * @param { string } sex the sex (male or female).
    */
   #setSex (sex) {
     if (sex === 'male' || sex === 'Male' || sex === 'MALE') {
@@ -122,14 +122,14 @@ export class CaloriesCounterForExercises {
   /**
    * Returns the sex of the person.
    *
-   * @returns { number } the sex (male or female).
+   * @returns { string } the sex (male or female).
    */
   getSex () {
     return this.#sex
   }
 
   /**
-   * Sets the sex of the person.
+   * Sets the activity level of the person.
    *
    * @param { number } activityLevel the activity level [1.2, 1.4, 1.6, 1.75, 2.0, 2.4].
    */
@@ -152,9 +152,9 @@ export class CaloriesCounterForExercises {
   }
 
   /**
-   * Returns the sex of the person.
+   * Returns the activity level of the person.
    *
-   * @returns { number } the sex (male or female).
+   * @returns { number } the activitly level [1.2, 1.4, 1.6, 1.75, 2.0, 2.4].
    */
   getActivityLevel () {
     return this.#activityLevel
@@ -222,7 +222,7 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesWalking (time) {
     let met
-    if (time > 0 && !isNaN(time)) {
+    if (time > 0 && time < 24 && !isNaN(time)) {
       met = 3.5
     } else {
       throw Error('Invalid Time')
@@ -238,7 +238,7 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesSwimming (time) {
     let met
-    if (time > 0 && !isNaN(time)) {
+    if (time > 0 && time < 24 && !isNaN(time)) {
       met = 6.0
     } else {
       throw Error('Invalid Time')
@@ -254,7 +254,7 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesRunning (time) {
     let met
-    if (time > 0 && !isNaN(time)) {
+    if (time > 0 && time < 24 && !isNaN(time)) {
       met = 10.0
     } else {
       throw Error('Invalid Time')
@@ -270,7 +270,7 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesWeightTraining (time) {
     let met
-    if (time > 0 && !isNaN(time)) {
+    if (time > 0 && time < 24 && !isNaN(time)) {
       met = 6.0
     } else {
       throw Error('Invalid Time')
@@ -286,7 +286,7 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesBadminton (time) {
     let met
-    if (time > 0 && !isNaN(time)) {
+    if (time > 0 && time < 24 && !isNaN(time)) {
       met = 5.5
     } else {
       throw Error('Invalid Time')
@@ -302,7 +302,7 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesBasketball (time) {
     let met
-    if (time > 0 && !isNaN(time)) {
+    if (time > 0 && time < 24 && !isNaN(time)) {
       met = 6.5
     } else {
       throw Error('Invalid Time')
@@ -318,7 +318,7 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesGolf (time) {
     let met
-    if (time > 0 && !isNaN(time)) {
+    if (time > 0 && time < 24 && !isNaN(time)) {
       met = 4.8
     } else {
       throw Error('Invalid Time')
@@ -334,7 +334,7 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesHandball (time) {
     let met
-    if (time > 0 && !isNaN(time)) {
+    if (time > 0 && time < 24 && !isNaN(time)) {
       met = 12.0
     } else {
       throw Error('Invalid Time')
@@ -350,7 +350,7 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesIcehockey (time) {
     let met
-    if (time > 0 && !isNaN(time)) {
+    if (time > 0 && time < 24 && !isNaN(time)) {
       met = 8.0
     } else {
       throw Error('Invalid Time')
@@ -366,7 +366,7 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesRollerblading (time) {
     let met
-    if (time > 0 && !isNaN(time)) {
+    if (time > 0 && time < 24 && !isNaN(time)) {
       met = 9.8
     } else {
       throw Error('Invalid Time')
@@ -382,7 +382,7 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesSoccer (time) {
     let met
-    if (time > 0 && !isNaN(time)) {
+    if (time > 0 && time < 24 && !isNaN(time)) {
       met = 7.0
     } else {
       throw Error('Invalid Time')
@@ -398,7 +398,7 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesTennis (time) {
     let met
-    if (time > 0 && !isNaN(time)) {
+    if (time > 0 && time < 24 && !isNaN(time)) {
       met = 7.3
     } else {
       throw Error('Invalid Time')
@@ -414,7 +414,7 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesBeachVolleyball (time) {
     let met
-    if (time > 0 && !isNaN(time)) {
+    if (time > 0 && time < 24 && !isNaN(time)) {
       met = 8.0
     } else {
       throw Error('Invalid Time')
