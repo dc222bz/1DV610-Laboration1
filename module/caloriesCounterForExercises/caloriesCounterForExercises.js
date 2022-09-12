@@ -222,12 +222,12 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesWalking (time) {
     let met
-    if (time > 0 && time < 24 && !isNaN(time)) {
+    if (time > 0 && time < 1440 && !isNaN(time)) {
       met = 3.5
     } else {
       throw Error('Invalid Time')
     }
-    return time * (met * 3.5 * this.#weight) / 200
+    return time * (met * 3.5 * this.getWeight()) / 200
   }
 
   /**
@@ -238,12 +238,12 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesSwimming (time) {
     let met
-    if (time > 0 && time < 24 && !isNaN(time)) {
+    if (time > 0 && time < 1440 && !isNaN(time)) {
       met = 6.0
     } else {
       throw Error('Invalid Time')
     }
-    return time * (met * 3.5 * this.#weight) / 200
+    return time * (met * 3.5 * this.getWeight()) / 200
   }
 
   /**
@@ -254,12 +254,12 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesRunning (time) {
     let met
-    if (time > 0 && time < 24 && !isNaN(time)) {
+    if (time > 0 && time < 1440 && !isNaN(time)) {
       met = 10.0
     } else {
       throw Error('Invalid Time')
     }
-    return time * (met * 3.5 * this.#weight) / 200
+    return time * (met * 3.5 * this.getWeight()) / 200
   }
 
   /**
@@ -270,12 +270,12 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesWeightTraining (time) {
     let met
-    if (time > 0 && time < 24 && !isNaN(time)) {
+    if (time > 0 && time < 1440 && !isNaN(time)) {
       met = 6.0
     } else {
       throw Error('Invalid Time')
     }
-    return time * (met * 3.5 * this.#weight) / 200
+    return time * (met * 3.5 * this.getWeight()) / 200
   }
 
   /**
@@ -286,12 +286,12 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesBadminton (time) {
     let met
-    if (time > 0 && time < 24 && !isNaN(time)) {
+    if (time > 0 && time < 1440 && !isNaN(time)) {
       met = 5.5
     } else {
       throw Error('Invalid Time')
     }
-    return time * (met * 3.5 * this.#weight) / 200
+    return time * (met * 3.5 * this.getWeight()) / 200
   }
 
   /**
@@ -302,12 +302,12 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesBasketball (time) {
     let met
-    if (time > 0 && time < 24 && !isNaN(time)) {
+    if (time > 0 && time < 1440 && !isNaN(time)) {
       met = 6.5
     } else {
       throw Error('Invalid Time')
     }
-    return time * (met * 3.5 * this.#weight) / 200
+    return time * (met * 3.5 * this.getWeight()) / 200
   }
 
   /**
@@ -318,12 +318,12 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesGolf (time) {
     let met
-    if (time > 0 && time < 24 && !isNaN(time)) {
+    if (time > 0 && time < 1440 && !isNaN(time)) {
       met = 4.8
     } else {
       throw Error('Invalid Time')
     }
-    return time * (met * 3.5 * this.#weight) / 200
+    return time * (met * 3.5 * this.getWeight()) / 200
   }
 
   /**
@@ -334,12 +334,12 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesHandball (time) {
     let met
-    if (time > 0 && time < 24 && !isNaN(time)) {
+    if (time > 0 && time < 1440 && !isNaN(time)) {
       met = 12.0
     } else {
       throw Error('Invalid Time')
     }
-    return time * (met * 3.5 * this.#weight) / 200
+    return time * (met * 3.5 * this.getWeight()) / 200
   }
 
   /**
@@ -350,12 +350,12 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesIcehockey (time) {
     let met
-    if (time > 0 && time < 24 && !isNaN(time)) {
+    if (time > 0 && time < 1440 && !isNaN(time)) {
       met = 8.0
     } else {
       throw Error('Invalid Time')
     }
-    return time * (met * 3.5 * this.#weight) / 200
+    return time * (met * 3.5 * this.getWeight()) / 200
   }
 
   /**
@@ -366,12 +366,12 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesRollerblading (time) {
     let met
-    if (time > 0 && time < 24 && !isNaN(time)) {
+    if (time > 0 && time < 1440 && !isNaN(time)) {
       met = 9.8
     } else {
       throw Error('Invalid Time')
     }
-    return time * (met * 3.5 * this.#weight) / 200
+    return time * (met * 3.5 * this.getWeight()) / 200
   }
 
   /**
@@ -382,12 +382,12 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesSoccer (time) {
     let met
-    if (time > 0 && time < 24 && !isNaN(time)) {
+    if (time > 0 && time < 1440 && !isNaN(time)) {
       met = 7.0
     } else {
       throw Error('Invalid Time')
     }
-    return time * (met * 3.5 * this.#weight) / 200
+    return time * (met * 3.5 * this.getWeight()) / 200
   }
 
   /**
@@ -398,12 +398,12 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesTennis (time) {
     let met
-    if (time > 0 && time < 24 && !isNaN(time)) {
+    if (time > 0 && time < 1440 && !isNaN(time)) {
       met = 7.3
     } else {
       throw Error('Invalid Time')
     }
-    return time * (met * 3.5 * this.#weight) / 200
+    return time * (met * 3.5 * this.getWeight()) / 200
   }
 
   /**
@@ -414,11 +414,11 @@ export class CaloriesCounterForExercises {
    */
   getCaloriesBeachVolleyball (time) {
     let met
-    if (time > 0 && time < 24 && !isNaN(time)) {
+    if (time > 0 && time < 1440 && !isNaN(time)) {
       met = 8.0
     } else {
       throw Error('Invalid Time')
     }
-    return time * (met * 3.5 * this.#weight) / 200
+    return time * (met * 3.5 * this.getWeight()) / 200
   }
 }
