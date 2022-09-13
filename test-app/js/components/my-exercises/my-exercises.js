@@ -74,9 +74,15 @@ customElements.define(
       this.#button.addEventListener('click', (event) => {
         event.stopPropagation()
         event.preventDefault()
-        const exercise = this.#exercise.options[this.#exercise.selectedIndex].text
+        // const exerciseName = this.#exercise.options[this.#exercise.selectedIndex].text
         const calories = new CaloriesCounterForExercises(180, 100, 38, 'male', 1.4)
-        this.#calories.textContent = this.#time.value + ' [min] of ' + exercise + ' burns ' + calories.getCaloriesSoccer(parseInt(this.#time.value)) + ' [kcal]'
+        let exerciseCalories = parseInt(window.sessionStorage.getItem('exerciseCalories'))
+        if (exerciseCalories !== null && !isNaN(exerciseCalories)) {
+          exerciseCalories = exerciseCalories + calories.getCaloriesSoccer(parseInt(this.#time.value))
+        } else {
+          exerciseCalories = calories.getCaloriesSoccer(parseInt(this.#time.value))
+        }
+        window.sessionStorage.setItem('exerciseCalories', JSON.stringify(exerciseCalories))
       })
     }
   }

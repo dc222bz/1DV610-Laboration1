@@ -3,7 +3,18 @@ body {
     color: darkkhaki;
 }
 
-.container {
-    width: 100%;
-    height: 100%;
+.containerCalories {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 20px;
+    left: 20px;
+}
+
+.containerExercises {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 20px;
+    left: 520px;
 }

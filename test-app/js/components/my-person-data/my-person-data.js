@@ -11,8 +11,7 @@ import { CaloriesCounterForExercises } from '../../../../module/caloriesCounterF
 const template = document.createElement('template')
 template.innerHTML = `
     <form onSubmit="return false">
-    <input type="text" id="name" placeholder="Enter Ur Name" autofocus> <br>
-    <input type="text" id="height" placeholder="Enter Ur Height" > [cm]<br> 
+    <input type="text" id="height" placeholder="Enter Ur Height" autofocus> [cm]<br> 
     <input type="text" id="weight" placeholder="Enter Ur Weight" > [kg]<br>
     <input type="text" id="age" placeholder="Enter Ur Age" > [years]<br>
     <select id="sex">
@@ -43,11 +42,6 @@ customElements.define(
      * "button to store name"
      */
     #button
-
-    /**
-     * "textfield for name"
-     */
-    #name
 
     /**
      * "textfield for height"
@@ -97,7 +91,6 @@ customElements.define(
       )
 
       // Get the input, datalist and article elements in the shadow root.
-      this.#name = this.shadowRoot.querySelector('#name')
       this.#button = this.shadowRoot.querySelector('#calculateData')
       this.#height = this.shadowRoot.querySelector('#height')
       this.#weight = this.shadowRoot.querySelector('#weight')
@@ -111,14 +104,25 @@ customElements.define(
       this.#button.addEventListener('click', (event) => {
         event.stopPropagation()
         event.preventDefault()
-        const height = parseInt(this.#height.value)
-        const weight = parseInt(this.#weight.value)
-        const age = parseInt(this.#age.value)
-        const sex = this.#sex.options[this.#sex.selectedIndex].text
-        const activitylevel = parseFloat(this.#activitylevel.options[this.#activitylevel.selectedIndex].text)
-        const personData = new CaloriesCounterForExercises(height, weight, age, sex, activitylevel)
+        const personData = new CaloriesCounterForExercises(parseInt(this.#height.value), parseInt(this.#weight.value), parseInt(this.#age.value), this.#sex.options[this.#sex.selectedIndex].text, parseFloat(this.#activitylevel.options[this.#activitylevel.selectedIndex].text))
         this.#bmr.textContent = 'BMR = ' + personData.getBMR() + ' [kcal]'
         this.#calmain.textContent = 'CaloriesMaintenance = ' + personData.getMaintenanceCalories() + ' [kcal]'
+        window.sessionStorage.setItem('BMR', JSON.stringify(personData.getBMR()))
+        window.sessionStorage.setItem('CalMain', JSON.stringify(personData.getMaintenanceCalories()))
+        const activitylevel = personData.getActivityLevel()
+        if (activitylevel === 1.2) {
+          this.dispatchEvent(new window.CustomEvent('oneExercise'))
+        } else if (activitylevel === 1.4) {
+          this.dispatchEvent(new window.CustomEvent('twoExercises'))
+        } else if (activitylevel === 1.6) {
+          this.dispatchEvent(new window.CustomEvent('threeExercises'))
+        } else if (activitylevel === 1.8) {
+          this.dispatchEvent(new window.CustomEvent('fourExercises'))
+        } else if (activitylevel === 2.0) {
+          this.dispatchEvent(new window.CustomEvent('fiveExercises'))
+        } else if (activitylevel === 2.4) {
+          this.dispatchEvent(new window.CustomEvent('sixExercises'))
+        }
       })
     }
   }
