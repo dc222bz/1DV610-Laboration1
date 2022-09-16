@@ -215,19 +215,39 @@ export class CaloriesCounterForExercises {
   }
 
   /**
+   * Returns the daily maintenance calories.
+   *
+   * @param { number } mets the constraint value used to calculate exercise calories.
+   * @param { number } time the time used to calculate exercise calories.
+   * @returns { number } the value of the burned calories [kcal].
+   */
+  #calculateCalories (mets, time) {
+    return time * (mets * 3.5 * this.getWeight()) / 200
+  }
+
+  /**
+   * Returns the daily maintenance calories.
+   *
+   * @param { number } time the time used to calculate exercise calories.
+   * @returns { number } the value of the burned calories [kcal].
+   */
+  #checkInput (time) {
+    if (time > 0 && time < 1440 && !isNaN(time) && (typeof time !== 'string') && (typeof time !== 'boolean')) {
+      return time
+    } else {
+      throw new Error('Invalid Time')
+    }
+  }
+
+  /**
    * Returns the calories burned from walking moderate pace (mets = 3.5).
    *
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
   getCaloriesWalking (time) {
-    let met
-    if (time > 0 && time < 1440 && !isNaN(time)) {
-      met = 3.5
-    } else {
-      throw new Error('Invalid Time')
-    }
-    return time * (met * 3.5 * this.getWeight()) / 200
+    const mets = 3.5
+    return this.#calculateCalories(mets, this.#checkInput(time))
   }
 
   /**
@@ -237,13 +257,8 @@ export class CaloriesCounterForExercises {
    * @returns { number } the value of calories burned (kcal).
    */
   getCaloriesSwimming (time) {
-    let met
-    if (time > 0 && time < 1440 && !isNaN(time)) {
-      met = 6.0
-    } else {
-      throw new Error('Invalid Time')
-    }
-    return time * (met * 3.5 * this.getWeight()) / 200
+    const mets = 6.0
+    return this.#calculateCalories(mets, this.#checkInput(time))
   }
 
   /**
@@ -253,13 +268,8 @@ export class CaloriesCounterForExercises {
    * @returns { number } the value of calories burned (kcal).
    */
   getCaloriesRunning (time) {
-    let met
-    if (time > 0 && time < 1440 && !isNaN(time)) {
-      met = 10.0
-    } else {
-      throw new Error('Invalid Time')
-    }
-    return time * (met * 3.5 * this.getWeight()) / 200
+    const mets = 10.0
+    return this.#calculateCalories(mets, this.#checkInput(time))
   }
 
   /**
@@ -269,13 +279,8 @@ export class CaloriesCounterForExercises {
    * @returns { number } the value of calories burned (kcal).
    */
   getCaloriesWeightTraining (time) {
-    let met
-    if (time > 0 && time < 1440 && !isNaN(time)) {
-      met = 6.0
-    } else {
-      throw new Error('Invalid Time')
-    }
-    return time * (met * 3.5 * this.getWeight()) / 200
+    const mets = 6.0
+    return this.#calculateCalories(mets, this.#checkInput(time))
   }
 
   /**
@@ -285,13 +290,8 @@ export class CaloriesCounterForExercises {
    * @returns { number } the value of calories burned (kcal).
    */
   getCaloriesBadminton (time) {
-    let met
-    if (time > 0 && time < 1440 && !isNaN(time)) {
-      met = 5.5
-    } else {
-      throw new Error('Invalid Time')
-    }
-    return time * (met * 3.5 * this.getWeight()) / 200
+    const mets = 5.5
+    return this.#calculateCalories(mets, this.#checkInput(time))
   }
 
   /**
@@ -301,13 +301,8 @@ export class CaloriesCounterForExercises {
    * @returns { number } the value of calories burned (kcal).
    */
   getCaloriesBasketball (time) {
-    let met
-    if (time > 0 && time < 1440 && !isNaN(time)) {
-      met = 6.5
-    } else {
-      throw new Error('Invalid Time')
-    }
-    return time * (met * 3.5 * this.getWeight()) / 200
+    const mets = 6.5
+    return this.#calculateCalories(mets, this.#checkInput(time))
   }
 
   /**
@@ -317,13 +312,8 @@ export class CaloriesCounterForExercises {
    * @returns { number } the value of calories burned (kcal).
    */
   getCaloriesGolf (time) {
-    let met
-    if (time > 0 && time < 1440 && !isNaN(time)) {
-      met = 4.8
-    } else {
-      throw new Error('Invalid Time')
-    }
-    return time * (met * 3.5 * this.getWeight()) / 200
+    const mets = 4.8
+    return this.#calculateCalories(mets, this.#checkInput(time))
   }
 
   /**
@@ -333,13 +323,8 @@ export class CaloriesCounterForExercises {
    * @returns { number } the value of calories burned (kcal).
    */
   getCaloriesHandball (time) {
-    let met
-    if (time > 0 && time < 1440 && !isNaN(time)) {
-      met = 12.0
-    } else {
-      throw new Error('Invalid Time')
-    }
-    return time * (met * 3.5 * this.getWeight()) / 200
+    const mets = 12.0
+    return this.#calculateCalories(mets, this.#checkInput(time))
   }
 
   /**
@@ -349,13 +334,8 @@ export class CaloriesCounterForExercises {
    * @returns { number } the value of calories burned (kcal).
    */
   getCaloriesIcehockey (time) {
-    let met
-    if (time > 0 && time < 1440 && !isNaN(time)) {
-      met = 8.0
-    } else {
-      throw new Error('Invalid Time')
-    }
-    return time * (met * 3.5 * this.getWeight()) / 200
+    const mets = 8.0
+    return this.#calculateCalories(mets, this.#checkInput(time))
   }
 
   /**
@@ -365,13 +345,8 @@ export class CaloriesCounterForExercises {
    * @returns { number } the value of calories burned (kcal).
    */
   getCaloriesRollerblading (time) {
-    let met
-    if (time > 0 && time < 1440 && !isNaN(time)) {
-      met = 9.8
-    } else {
-      throw new Error('Invalid Time')
-    }
-    return time * (met * 3.5 * this.getWeight()) / 200
+    const mets = 9.8
+    return this.#calculateCalories(mets, this.#checkInput(time))
   }
 
   /**
@@ -381,13 +356,8 @@ export class CaloriesCounterForExercises {
    * @returns { number } the value of calories burned (kcal).
    */
   getCaloriesSoccer (time) {
-    let met
-    if (time > 0 && time < 1440 && !isNaN(time)) {
-      met = 7.0
-    } else {
-      throw new Error('Invalid Time')
-    }
-    return time * (met * 3.5 * this.getWeight()) / 200
+    const mets = 7.0
+    return this.#calculateCalories(mets, this.#checkInput(time))
   }
 
   /**
@@ -397,13 +367,8 @@ export class CaloriesCounterForExercises {
    * @returns { number } the value of calories burned (kcal).
    */
   getCaloriesTennis (time) {
-    let met
-    if (time > 0 && time < 1440 && !isNaN(time)) {
-      met = 7.3
-    } else {
-      throw new Error('Invalid Time')
-    }
-    return time * (met * 3.5 * this.getWeight()) / 200
+    const mets = 7.3
+    return this.#calculateCalories(mets, this.#checkInput(time))
   }
 
   /**
@@ -413,12 +378,7 @@ export class CaloriesCounterForExercises {
    * @returns { number } the value of calories burned (kcal).
    */
   getCaloriesBeachVolleyball (time) {
-    let met
-    if (time > 0 && time < 1440 && !isNaN(time)) {
-      met = 8.0
-    } else {
-      throw new Error('Invalid Time')
-    }
-    return time * (met * 3.5 * this.getWeight()) / 200
+    const mets = 8.0
+    return this.#calculateCalories(mets, this.#checkInput(time))
   }
 }
