@@ -1,4 +1,5 @@
 ## Testrapport
+```
 > laboration1@1.0.0 test
 > npx --node-options=--experimental-vm-modules jest || exit 0
 
@@ -27,3 +28,4 @@ Tests:       14 passed, 14 total
 Snapshots:   0 total
 Time:        1.747 s, estimated 3 s
 Ran all test suites.
+```
