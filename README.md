@@ -1,6 +1,6 @@
 # 1DV610-Laboration1 _(caloriesCounterForExercises)_
 
-A module that can calculate the BMI and maintenance calories needed depending on a persons lenght, height, age, sex and activity level. It also have methods for calculate calories burned during different exercises, the result is depending on the time the exercise is done and the weight of the person doing the exercise.
+A module that can calculate the BMI and maintenance calories needed depending on a persons lenght, height, age, sex and activity level. It also have methods for calculate calories burned during different exercises, the result is depending of how long the time it takes to complete the exercise and the weight of the person doing the exercise.
 
 # Usage
 
