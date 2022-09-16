@@ -44,7 +44,7 @@ export class CaloriesCounterForExercises {
    * @param { number } height the height in centimeters.
    */
   #setHeight (height) {
-    if (height > 0 && height < 250 && !isNaN(height)) {
+    if (height > 0 && height < 250 && !isNaN(height) && (typeof time !== 'string') && (typeof time !== 'boolean')) {
       this.#height = height
     } else {
       throw new Error('Invalid Height')
@@ -66,7 +66,7 @@ export class CaloriesCounterForExercises {
    * @param { number } weight the weight (kg).
    */
   #setWeight (weight) {
-    if (weight > 0 && weight < 500 && !isNaN(weight)) {
+    if (weight > 0 && weight < 500 && !isNaN(weight) && (typeof time !== 'string') && (typeof time !== 'boolean')) {
       this.#weight = weight
     } else {
       throw new Error('Invalid Weight')
@@ -88,7 +88,7 @@ export class CaloriesCounterForExercises {
    * @param { number } age the age (years).
    */
   #setAge (age) {
-    if (age > 0 && age < 120 && !isNaN(age)) {
+    if (age > 0 && age < 120 && !isNaN(age) && (typeof time !== 'string') && (typeof time !== 'boolean')) {
       this.#age = age
     } else {
       throw new Error('Invalid Age')
@@ -215,7 +215,7 @@ export class CaloriesCounterForExercises {
   }
 
   /**
-   * Returns the daily maintenance calories.
+   * Returns the calories burned from a given a exercise.
    *
    * @param { number } mets the constraint value used to calculate exercise calories.
    * @param { number } time the time used to calculate exercise calories.
@@ -226,7 +226,7 @@ export class CaloriesCounterForExercises {
   }
 
   /**
-   * Returns the daily maintenance calories.
+   * Validates the input.
    *
    * @param { number } time the time used to calculate exercise calories.
    * @returns { number } the value of the burned calories [kcal].
@@ -245,7 +245,7 @@ export class CaloriesCounterForExercises {
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
-  getCaloriesWalking (time) {
+  caloriesWalking (time) {
     const mets = 3.5
     return this.#calculateCalories(mets, this.#checkInput(time))
   }
@@ -256,7 +256,7 @@ export class CaloriesCounterForExercises {
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
-  getCaloriesSwimming (time) {
+  caloriesSwimming (time) {
     const mets = 6.0
     return this.#calculateCalories(mets, this.#checkInput(time))
   }
@@ -267,7 +267,7 @@ export class CaloriesCounterForExercises {
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
-  getCaloriesRunning (time) {
+  caloriesRunning (time) {
     const mets = 10.0
     return this.#calculateCalories(mets, this.#checkInput(time))
   }
@@ -278,7 +278,7 @@ export class CaloriesCounterForExercises {
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
-  getCaloriesWeightTraining (time) {
+  caloriesWeightTraining (time) {
     const mets = 6.0
     return this.#calculateCalories(mets, this.#checkInput(time))
   }
@@ -289,7 +289,7 @@ export class CaloriesCounterForExercises {
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
-  getCaloriesBadminton (time) {
+  caloriesBadminton (time) {
     const mets = 5.5
     return this.#calculateCalories(mets, this.#checkInput(time))
   }
@@ -300,7 +300,7 @@ export class CaloriesCounterForExercises {
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
-  getCaloriesBasketball (time) {
+  caloriesBasketball (time) {
     const mets = 6.5
     return this.#calculateCalories(mets, this.#checkInput(time))
   }
@@ -311,7 +311,7 @@ export class CaloriesCounterForExercises {
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
-  getCaloriesGolf (time) {
+  caloriesGolf (time) {
     const mets = 4.8
     return this.#calculateCalories(mets, this.#checkInput(time))
   }
@@ -322,7 +322,7 @@ export class CaloriesCounterForExercises {
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
-  getCaloriesHandball (time) {
+  caloriesHandball (time) {
     const mets = 12.0
     return this.#calculateCalories(mets, this.#checkInput(time))
   }
@@ -333,7 +333,7 @@ export class CaloriesCounterForExercises {
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
-  getCaloriesIcehockey (time) {
+  caloriesIcehockey (time) {
     const mets = 8.0
     return this.#calculateCalories(mets, this.#checkInput(time))
   }
@@ -344,7 +344,7 @@ export class CaloriesCounterForExercises {
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
-  getCaloriesRollerblading (time) {
+  caloriesRollerblading (time) {
     const mets = 9.8
     return this.#calculateCalories(mets, this.#checkInput(time))
   }
@@ -355,7 +355,7 @@ export class CaloriesCounterForExercises {
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
-  getCaloriesSoccer (time) {
+  caloriesSoccer (time) {
     const mets = 7.0
     return this.#calculateCalories(mets, this.#checkInput(time))
   }
@@ -366,7 +366,7 @@ export class CaloriesCounterForExercises {
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
-  getCaloriesTennis (time) {
+  caloriesTennis (time) {
     const mets = 7.3
     return this.#calculateCalories(mets, this.#checkInput(time))
   }
@@ -377,7 +377,7 @@ export class CaloriesCounterForExercises {
    * @param { number } time the time in minutes.
    * @returns { number } the value of calories burned (kcal).
    */
-  getCaloriesBeachVolleyball (time) {
+  caloriesBeachVolleyball (time) {
     const mets = 8.0
     return this.#calculateCalories(mets, this.#checkInput(time))
   }
