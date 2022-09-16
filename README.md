@@ -2,12 +2,6 @@
 
 A module that can calculate the BMI and maintenance calories needed depending on a persons lenght, height, age, sex and activity level. It also have methods for calculate calories burned during different exercises, the result is depending on the time the exercise is done and the weight of the person doing the exercise.
 
-# Install
-
-```sh
-npm install caloriesCounterForExercises
-```
-
 # Usage
 
 ```js

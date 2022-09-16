@@ -1,7 +1,7 @@
 {
-  "name": "laboration0",
+  "name": "laboration1",
   "version": "1.0.0",
-  "description": "1DV610 - Laboration 0",
+  "description": "1DV610 - Laboration 1",
   "type": "module",
   "browser": "test-app/js/index.js",
   "scripts": {
