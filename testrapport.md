@@ -1,23 +1,23 @@
 ## Testrapport
 Automatiska enhetstesterna genomfördes med testverktyget JEST.
-Och två olika instanser av modulen skapades en manlig och en kvinnlig eftersom ekvationen för BMR ser olika ut för dessa. Sedan testades enligt tabellerna nedanför tvår olka sortes tester en med korrekta inmatningar och en med felaktiga inmatningar. Koden för testningen hittar ni här, [testkod](https://github.com/dc222bz/1DV610-Laboration1/blob/main/test-app/test-app.test.js) och testrapporten från testkoden ser ni längts ner i dokumentet.
+Och två olika instanser av modulen skapades en manlig och en kvinnlig eftersom ekvationen för BMR ser olika ut för dessa. Sedan testades enligt tabellerna nedanför tvår olka sortes tester en med korrekta inmatningar och en med felaktiga inmatningar. Koden för testningen hittar ni här, [testkod](https://github.com/dc222bz/1DV610-Laboration1/blob/main/test-app/test-app.test.js) och reultatet från testkoden ser ni längts ner i dokumentet.
 <table>
 <caption><b>Tester med korrekta inmatningar</b></caption>
 <thead><tr><th>Vad som testats</th><th>Hur det testats</th><th>Testresultat</th></tr></thead>
 <tbody>
-<tr><td>Metoden getWeight testas med korrekt input</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
+<tr><td>Metoden getWeight testas.</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
 
-<tr><td>Metoden geHeight testas med korrekt input</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
+<tr><td>Metoden geHeight testas.</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
 
-<tr><td>Metoden getAge testas med korrekt input</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
+<tr><td>Metoden getAge testas.</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
 
-<tr><td>Metoden getSex testas med korrekt input</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
+<tr><td>Metoden getSex testas.</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
 
-<tr><td>Metoden getActivityLevel testas med korrekt input</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
+<tr><td>Metoden getActivityLevel testas.</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
 
-<tr><td>Metoden getBMR testas med korrekt input</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
+<tr><td>Metoden getBMR testas.</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
 
-<tr><td>Metoden getMaintenanceCalories testas med korrekt input</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
+<tr><td>Metoden getMaintenanceCalories testas.</td><td>Automatiskt enhetstest</td><td>OK</td></tr>
 
 <tr><td>Olika träningsmiljöer testas hur många calorier dem förbränner under 60 minuter (exerciseCalories).<br>
 Metoden caloriesBadminton<br>
