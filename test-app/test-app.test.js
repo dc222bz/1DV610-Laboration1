@@ -13,15 +13,12 @@ const testPersonFemale = new CaloriesCounterForExercises(152, 52, 28, 'female', 
 describe('test right input', () => {
   it('Weight', () => {
     expect(testPersonMale.getWeight()).toEqual(100)
-    expect(testPersonFemale.getWeight()).toEqual(52)
   })
   it('Height', () => {
     expect(testPersonMale.getHeight()).toEqual(180)
-    expect(testPersonFemale.getHeight()).toEqual(152)
   })
   it('Age', () => {
     expect(testPersonMale.getAge()).toEqual(38)
-    expect(testPersonFemale.getAge()).toEqual(28)
   })
   it('Sex', () => {
     expect(testPersonMale.getSex()).toEqual('male')
@@ -29,7 +26,6 @@ describe('test right input', () => {
   })
   it('Activitly Level', () => {
     expect(testPersonMale.getActivityLevel()).toEqual(1.2)
-    expect(testPersonFemale.getActivityLevel()).toEqual(1.75)
   })
   it('calculate BMR', () => {
     expect(testPersonMale.getBMR()).toEqual(1940)
@@ -37,7 +33,6 @@ describe('test right input', () => {
   })
   it('maintenanceCalories', () => {
     expect(testPersonMale.getMaintenanceCalories()).toEqual(2328)
-    expect(testPersonFemale.getMaintenanceCalories()).toEqual(2045.75)
   })
   it('exerciseCalories', () => {
     expect(testPersonMale.caloriesBadminton(60)).toEqual(577.5)

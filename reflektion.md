@@ -48,14 +48,21 @@ Detta med namngivning blir själklart bättre ju mer kod man skriver och läser,
 <table>
 <thead><tr><th>Metodnamn och länk eller kod</th><th>Antal rader</th><th>Reflektion</th></tr></thead>
 <tbody>
-<tr><td>...</td><td>...</td><td>...</td></tr>
+<tr><td><b>setMaintenanceCalories()</b></td><td>16</td><td>...</td></tr>
 
-<tr><td>...</td><td>...</td><td>...</td></tr>
+<tr><td><b>setActivityLevel(activityLevel)</b></td><td>17</td><td>...</td></tr>
 
-<tr><td>...</td><td>...</td><td>...</td></tr>
+<tr><td><b>setSex()</b></td><td>9</td><td>...</td></tr>
 
-<tr><td>...</td><td>...</td><td>...</td></tr>
+<tr><td><b>setBMR()</b></td><td>9</td><td>...</td></tr>
 
-<tr><td>...</td><td>...</td><td>...</td></tr>
+<tr><td><b>checkInput(time)</b></td><td>8</td><td>...</td></tr>
 </tbody>
 </table>
+<br>
+
+## Min reflektion på kapitel 3
+Min huvudpoäng att ta ifrån kapitel 3 är att funktioner endast sak göra en sak, fokuserar man på detta får man mycket vunnet. Att sin berättelse med koden blir mer lättläst, vilket också var en slutpoäng från kapitel 3. Dessutom om man håller ner funktionerna till att endast göra en sak blir det svårare att upprepa att koda samma problem flera gånger.<br>
+I mitt fall är detta mitt främsta misstag att man skriver flera if/ else satser i samma funktion och på så sätt försämrar läsbarheten.
+<br>
+Slutligen blir funktionsskapadet bättre med mera erfarenhet och med att man läser och försöker förstå andras funktioner.
