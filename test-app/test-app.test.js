@@ -5,7 +5,7 @@
  * @version 1.0.0
  */
 
-import { CaloriesCounterForExercises } from '../module/caloriesCounterForExercises/caloriesCounterForExercises.js'
+import { CaloriesCounterForExercises } from '../module/caloriesCounterForExercises.js'
 
 const testPersonMale = new CaloriesCounterForExercises(180, 100, 38, 'male', 1.2)
 const testPersonFemale = new CaloriesCounterForExercises(152, 52, 28, 'female', 1.75)

@@ -5,7 +5,7 @@ A module that can calculate the BMI and maintenance calories needed depending on
 # Usage
 
 ```js
-import { CaloriesCounterForExercises } from '../module/caloriesCounterForExercises'
+import { CaloriesCounterForExercises } from '../module/caloriesCounterForExercises.js'
 
 const person = new CaloriesCounterForExercises(185, 79, 31, 'male', 1.4)
 
