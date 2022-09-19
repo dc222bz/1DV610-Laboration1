@@ -38,7 +38,7 @@ Summeringen av kapitel 2 är att namnge identifierare är inte lätt utan kräve
 
 Dessutom att man undviker förkortningar är en bra tumregel, för att med dessa är sannolikheten stor att någon som läser koden kommer att misstolka den eller att förkortning betyder något helt annat än vad man använder den till i koden.<br>
 
-Vid kodning så är man oftast i problemlösningsmode vilket oftast leder till att man tänker på vad sina identifierare namges till. Viktigt här att man tar sig tid att gå igenom koden och reflektera på alla identifierare man skapat efter problemet är löst. <br>
+Vid kodning så är man oftast i problemlösningsmode vilket oftast leder till att man inte alltid tänker på vad sina identifierare namges till. Viktigt här att man tar sig tid att gå igenom koden och reflektera på alla identifierare man skapat efter problemet är löst. <br>
 
 Detta med namngivning blir själklart bättre ju mer kod man skriver och läser, samt sammarbetar med andra i projekt där alla måste kunna förstå koden som man arbetar med. Så att slutligen med mera erfarenhet borde namngivningen bli bättre också får man hoppas...
 
@@ -48,15 +48,15 @@ Detta med namngivning blir själklart bättre ju mer kod man skriver och läser,
 <table>
 <thead><tr><th>Metodnamn och länk eller kod</th><th>Antal rader</th><th>Reflektion</th></tr></thead>
 <tbody>
-<tr><td><b>setMaintenanceCalories()</b></td><td>16</td><td>...</td></tr>
+<tr><td><b>setMaintenanceCalories()</b></td><td>16</td><td><b>Don't Repeat Yourself</b><br>I denna metod har jag hämtar jag data från två andra metoder och returnerar produkten av dessa.</td></tr>
 
-<tr><td><b>setActivityLevel(activityLevel)</b></td><td>17</td><td>...</td></tr>
+<tr><td><b>setActivityLevel(activityLevel)</b></td><td>17</td><td><b>Use Descriptive Names</b><br>Här försöker jag förklara vad metoden gör med ett lite längre namn. </td></tr>
 
-<tr><td><b>setSex()</b></td><td>9</td><td>...</td></tr>
+<tr><td><b>setSex()</b></td><td>9</td><td><b>Use Descriptive Names</b><br>Här försöker jag förklara vad metoden gör med ett kort och enkelt namn. </td></tr>
 
-<tr><td><b>setBMR()</b></td><td>9</td><td>...</td></tr>
+<tr><td><b>setBMR()</b></td><td>9</td><td><b>Use Descriptive Names</b><br>Här kan jag namngett metoden tydligare t.ex. setBasalMetabolicRate. </td></tr>
 
-<tr><td><b>checkInput(time)</b></td><td>8</td><td>...</td></tr>
+<tr><td><b>checkInput(time)</b></td><td>8</td><td><b>Error Handling Is One Thing</b><br>Här har jag löst ut felhanteringen för imatning av tid till andra metoder.</td></tr>
 </tbody>
 </table>
 <br>
