@@ -34,11 +34,11 @@ Metoder ska börja med ett verb, t.ex. burnedCaloriesGolf.
 <br>
 
 ## Min reflektion på kapitel 2
-Summeringen av kapitel 2 är att namnge identifierare är inte lätt utan kräver fullt focus och att man tänker på att andra ska kunna förstå dessa utan att behöva speciel kunskap om koden. Brister hos mig finns massa vid namngivning men efter denna kurs borde dessa bli färre. Att metodnamn ska börja med ett verb hade jag inte fullkoll på och att man tänker på att "Add Meaningful Context" när man beräknar saker, så man vet till vad resultatet tillhör.<br>
+Summeringen av kapitel 2 är att namnge identifierare är inte lätt utan kräver fullt focus och att man tänker på att andra ska kunna förstå dessa utan att behöva speciel kunskap om koden. Brister hos mig finns massa vid namngivning men efter denna kurs borde dessa bli färre. Att metodnamn ska börja med ett verb hade jag inte fullkoll på och att man tänker på att "Add Meaningful Context" när man beräknar saker, så man vet till vad resultatet tillhör.
 
-Dessutom att man undviker förkortningar är en bra tumregel, för att med dessa är sannolikheten stor att någon som läser koden kommer att misstolka den eller att förkortning betyder något helt annat än vad man använder den till i koden.<br>
+Dessutom att man undviker förkortningar är en bra tumregel, för att med dessa är sannolikheten stor att någon som läser koden kommer att misstolka den eller att förkortning betyder något helt annat än vad man använder den till i koden.
 
-Vid kodning så är man oftast i problemlösningsmode vilket oftast leder till att man inte alltid tänker på vad sina identifierare namges till. Viktigt här att man tar sig tid att gå igenom koden och reflektera på alla identifierare man skapat efter problemet är löst. <br>
+Vid kodning så är man oftast i problemlösningsmode vilket oftast leder till att man inte alltid tänker på vad sina identifierare namges till. Viktigt här att man tar sig tid att gå igenom koden och reflektera på alla identifierare man skapat efter problemet är löst.
 
 Detta med namngivning blir själklart bättre ju mer kod man skriver och läser, samt sammarbetar med andra i projekt där alla måste kunna förstå koden som man arbetar med. Så att slutligen med mera erfarenhet borde namngivningen bli bättre också får man hoppas...
 
@@ -59,10 +59,12 @@ Detta med namngivning blir själklart bättre ju mer kod man skriver och läser,
 <tr><td><b>checkInput(time)</b></td><td>8</td><td><b>Error Handling Is One Thing</b><br>Här har jag löst ut felhanteringen för imatning av tid till andra metoder.</td></tr>
 </tbody>
 </table>
+
 <br>
 
 ## Min reflektion på kapitel 3
-Min huvudpoäng att ta ifrån kapitel 3 är att funktioner endast sak göra en sak, fokuserar man på detta får man mycket vunnet. Att sin berättelse med koden blir mer lättläst, vilket också var en slutpoäng från kapitel 3. Dessutom om man håller ner funktionerna till att endast göra en sak blir det svårare att upprepa att koda samma problem flera gånger.<br>
+Min huvudpoäng att ta ifrån kapitel 3 är att funktioner endast sak göra en sak, fokuserar man på detta får man mycket vunnet. Att sin berättelse med koden blir mer lättläst, vilket också var en slutpoäng från kapitel 3. Dessutom om man håller ner funktionerna till att endast göra en sak blir det svårare att upprepa att koda samma problem flera gånger.
+
 I mitt fall är detta mitt främsta misstag att man skriver flera if/ else satser i samma funktion och på så sätt försämrar läsbarheten.
-<br>
+
 Slutligen blir funktionsskapadet bättre med mera erfarenhet och med att man läser och försöker förstå andras funktioner.
