@@ -41,7 +41,7 @@ export class CaloriesCounterForExercises {
   /**
    * Sets the height of the person.
    *
-   * @param { number } height the height in centimeters.
+   * @param { number } height the height (cm).
    */
   #setHeight (height) {
     if (height > 0 && height < 250 && !isNaN(height) && (typeof time !== 'string') && (typeof time !== 'boolean')) {

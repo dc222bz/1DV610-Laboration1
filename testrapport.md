@@ -69,7 +69,7 @@ Metoden caloriesWeightTraning<br>
 </table>
 <br>
 
-```
+```bash
 > laboration1@1.0.0 test
 > npx --node-options=--experimental-vm-modules jest || exit 0
 
