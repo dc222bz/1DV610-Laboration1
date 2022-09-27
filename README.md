@@ -31,7 +31,7 @@ import { CaloriesCounterForExercises } from '../module/caloriesCounterForExercis
 
 const person = new CaloriesCounterForExercises(185, 79, 31, 'male', 1.4)
 
-const bmi = person.getBMI()
+const bmr = person.getBMR()
 
 const maintenaceCalories = person.getMaintenanceCalories()
 
