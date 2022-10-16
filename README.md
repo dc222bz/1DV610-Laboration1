@@ -4,13 +4,7 @@ A module that can calculate the BMI and maintenance calories needed depending on
 
 # Install
 ```bash
-git clone https://github.com/dc222bz/1DV610-Laboration1.git
-```
-```bash
-cd 1DV610-Laboration1
-```
-```bash
-npm install
+npm install caloriesCounter
 ```
 
 # Run Commands
@@ -27,15 +21,22 @@ npm run lint:fix // fixes formats errors in module.
 # Usage
 
 ```js
-import { CaloriesCounterForExercises } from '../module/caloriesCounterForExercises.js'
+import { CaloriesCounter } from '../module/caloriesCounter.js'
 
-const person = new CaloriesCounterForExercises(185, 79, 31, 'male', 1.4)
+// height, weight, age, sex, and activity level as inputs.
+const person = new CaloriesCounter(185, 79, 31, 'male', 1.4) 
 
-const bmr = person.getBMR()
+// The Basal Metabolic Rate is calculated using the Mifflin-St Jeor formula.
+const basalmetabolicrate = person.getBasalMetaBolicRate()
 
-const maintenaceCalories = person.getMaintenanceCalories()
+// The Active Metabolic Rate is calculated using - Basal Metabolic Rate * activity level
+const ActiveMetabolicRate = person.getActiveMetabolicRate()
 
-const caloriesBurned = person.caloriesRunning(45)
+// The formula used to calculate burned calories from exercises are - time * (mets * 3.5 * weight) / 200. 
+// source: https://www.exercise4weightloss.com/calories-burned-during-exercise.html
+// Metabolic Equivalent of a Task (met) – measures how many times more energy an activity burns in comparison to sitting still for the same period of time (met = 1).
+// time as input.
+const caloriesBurned = person.burnedCaloriesRunning(45)
 ```
 
 # Contributing
